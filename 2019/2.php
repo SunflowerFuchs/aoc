@@ -8,14 +8,13 @@ if ($argc < 2) {
     die(127);
 }
 
-$expected = '19690720';
-
-
 $vals = explode(',', $argv[1]);
+$vals[1] = 12;
+$vals[2] = 2;
 for($i = 0; $i < count($vals); $i++) {
     switch($vals[$i]) {
         case 99:
-            echo PHP_EOL . "Envountered OP99" . PHP_EOL;
+            echo PHP_EOL . "Encountered OP99" . PHP_EOL;
             break 2;
         case 1:
             $in1 = $vals[++$i];
